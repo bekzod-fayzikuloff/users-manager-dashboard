@@ -8,9 +8,12 @@ import React, {useContext, useState} from "react";
 import {AuthContext} from "../../context/AuthContext";
 import {sendDataAuthRequire} from "../../services/requests";
 import {API_URL} from "../../config.js";
+import {useNavigate} from "react-router-dom";
 
 export const UsersTable = (props: {users: IUser[], changeUsers:  React.Dispatch<React.SetStateAction<IUser[]>>}) => {
   const {users, changeUsers} = props
+  const navigate = useNavigate()
+  const { user }: {user} = useContext(AuthContext);
   const {logoutUser}: {logoutUser} = useContext(AuthContext)
   const [checked, setChecked] = useState<string[]>([])
 
@@ -34,6 +37,9 @@ export const UsersTable = (props: {users: IUser[], changeUsers:  React.Dispatch<
   }
 
   const blockUsers = () => {
+    if (checked.includes(user.userId)){
+      navigate("/sign-in")
+    }
     changeStatus(true)
   }
 
