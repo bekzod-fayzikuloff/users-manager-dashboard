@@ -1,0 +1,24 @@
+.root {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+}
+
+.sign__form {
+    border: 1px solid rgba(192, 182, 182, 0.51);
+    border-radius: 7pt;
+    padding: 20pt;
+    min-width: 30%;
+}
+
+.tooltip {
+    color: #6c6ce3;
+    cursor: pointer;
+}
+
+.error_alert {
+    text-align: center;
+    color: #da5555;
+}

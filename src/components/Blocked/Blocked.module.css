@@ -1,0 +1,16 @@
+
+.root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border-radius: 20pt;
+  text-align: center;
+  width: 30%;
+  height: 30%;
+  background-color: #494343;
+  color: aliceblue;
+}

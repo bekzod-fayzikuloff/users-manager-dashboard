@@ -1,0 +1,13 @@
+.check__area {
+  display: flex;
+  justify-content: center;
+}
+
+.actions__block a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.actions__block a svg {
+  margin: 3pt;
+}
